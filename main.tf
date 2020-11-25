@@ -279,7 +279,8 @@ module "ecs_cloudwatch_sns_alarms" {
 }
 
 module "alb_target_group_cloudwatch_sns_alarms" {
-  source                         = "git::https://github.com/cloudposse/terraform-aws-alb-target-group-cloudwatch-sns-alarms.git?ref=tags/0.11.2"
+  # source                         = "git::https://github.com/cloudposse/terraform-aws-alb-target-group-cloudwatch-sns-alarms.git?ref=tags/0.11.2"
+  source                         = "git::https://github.com/okgolove/terraform-aws-alb-target-group-cloudwatch-sns-alarms.git?ref=feature/latest-features"
   enabled                        = var.alb_target_group_alarms_enabled
   name                           = module.this.name
   namespace                      = module.this.namespace
