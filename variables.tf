@@ -198,7 +198,7 @@ variable "mount_points" {
   default     = []
 }
 
-variable "environment" {
+variable "container_environment" {
   type = list(object({
     name  = string
     value = string
@@ -207,7 +207,7 @@ variable "environment" {
   default     = null
 }
 
-variable "map_environment" {
+variable "map_container_environment" {
   type        = map(string)
   description = "The environment variables to pass to the container. This is a map of string: {key: value}. `environment` overrides `map_environment`"
   default     = null
