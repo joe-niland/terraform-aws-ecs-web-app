@@ -217,7 +217,7 @@ locals {
 }
 
 module "ecs_cloudwatch_sns_alarms" {
-  source  = "git::https://github.com/cloudposse/terraform-aws-ecs-cloudwatch-sns-alarms.git?ref=tags/0.7.2"
+  source  = "git::https://github.com/cloudposse/terraform-aws-ecs-cloudwatch-sns-alarms.git?ref=tags/0.8.1"
   enabled = module.this.enabled && var.ecs_alarms_enabled
 
   context = module.this.context
