@@ -149,11 +149,8 @@ module "ecs_alb_service_task" {
 
 module "ecs_codepipeline" {
   enabled               = var.codepipeline_enabled
-  source                = "git::https://github.com/cloudposse/terraform-aws-ecs-codepipeline.git?ref=tags/0.18.0"
-  name                  = module.this.name
-  namespace             = module.this.namespace
-  stage                 = module.this.stage
-  attributes            = module.this.attributes
+  source                = "git::https://github.com/Polinode/terraform-aws-ecs-codepipeline.git?ref=tags/0.18.3"
+  context               = module.this.context
   region                = var.region
   github_oauth_token    = var.github_oauth_token
   github_anonymous      = var.github_webhooks_anonymous
