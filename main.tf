@@ -149,7 +149,7 @@ module "ecs_alb_service_task" {
 
 module "ecs_codepipeline" {
   enabled               = var.codepipeline_enabled
-  source                = "git::https://github.com/Polinode/terraform-aws-ecs-codepipeline.git?ref=tags/0.18.3"
+  source                = "git::https://github.com/joe-niland/terraform-aws-ecs-codepipeline.git?ref=temp-update-codebuild-upstream"
   context               = module.this.context
   region                = var.region
   github_oauth_token    = var.github_oauth_token
